@@ -1,0 +1,12 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    margin: 200px;
+    background-color: black;
+    color: white;
+    font-family: "Rowan";
+}
+
