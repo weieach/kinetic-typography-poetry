@@ -1,0 +1,108 @@
+@import url('/css/rowan.css');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    margin: 200px;
+    background-color: black;
+    color: white;
+}
+
+section{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+p{
+    position: absolute;
+    top: 200px;
+    left: 10%;
+    font-size: 1.5rem;
+    padding: 20px;
+    font-family: Rowan-Regular;
+
+
+}
+
+
+.word {
+  display: inline-block; /* required for transforms */
+  /* filter: blur(10px);
+  /* rotate: 10deg; */
+  transition: filter 1s; 
+}
+
+.word:hover {
+  /* filter: blur(0px);
+  transition: filter 1s; */
+}
+
+.text-blur {
+  filter: blur(10px);
+  transition: filter 1s;
+}
+
+.text-blur:hover {
+  filter: blur(0px);
+  transition: filter 1s;
+}
+
+.text-parallax-section{
+  height: 200vh;
+}
+
+.text-parallax-section p{
+  top: 50%;
+}
+
+.text-float-section p{
+  top: 35vh;
+  left: 10%;
+}
+
+.text-float-section p:nth-child(2){
+  top: 40vh;
+}
+
+.text-split-section p:nth-child(1){
+  top: 35vh;
+}
+
+.text-split-section p:nth-child(2){
+  top: 40vh;
+}
+
+.text-split-section p:nth-child(3){
+  top: 45vh;
+}
+
+.rainy {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  overflow: visible;
+  text-decoration: underline;
+}
+
+.rain-drop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  color: cadetblue;
+  font-size: 1em;
+  line-height: 1;
+  animation: rain-fall 1.2s linear forwards;
+}
+
+
+@keyframes rain-fall {
+  to {
+    transform: translateY(140px);
+    opacity: 0;
+  }
+}
