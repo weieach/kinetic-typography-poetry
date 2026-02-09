@@ -1,12 +1,142 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
 }
 
-body{
-    margin: 200px;
-    background-color: black;
-    color: white;
-    font-family: "Rowan";
+:root {
+  --dark-gray: #3d3f3f;
+  --teal: #218683;
 }
 
+body {
+  /* margin: 200px; */
+  color: white;
+  font-family: "Rowan";
+  background-color: #208683;
+}
+
+section {
+  height: 101vh;
+  width: 100vw;
+  position: relative;
+}
+
+header {
+  position: fixed;
+  z-index: 100;
+  width: 600px;
+  width: 100vw;
+
+  top: 0;
+  /* left: 32vw; */
+  padding: 5vh 5vw;
+  font-size: 0.6rem;
+}
+
+header > * {
+  font-weight: 400;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+/* poem body */
+main {
+  position: fixed;
+  z-index: 200;
+  /* position: absolute; */
+  /* left: 36vw; */
+  top: 50vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 500px 1fr;
+}
+
+main > div{
+    margin-inline: auto;
+    grid-column: 2;
+}
+
+
+p {
+  z-index: 100;
+  font-size: 1.1rem;
+}
+
+.canvas-array {
+  height: 100vh;
+  overflow:hidden
+}
+
+.screen-1 {
+  position: relative;
+  z-index: 300;
+  background-color: var(--dark-gray);
+}
+
+.pin-spacer:first-child{
+    background-color: var(--dark-gray);
+}
+
+.poem-line {
+  width: 100%;
+  text-align: left;
+  /* margin-bottom: 0.4rem; */
+  line-height: 1.6;
+}
+
+.stanza-end{
+    margin-bottom: 2rem;
+}
+
+/* .poem-line:not(.poem-line:first-of-type) */
+
+.screen-1-canvas {
+  filter: blur(14px);
+  position: relative;
+  top: 0;
+  /* filter: blur(20px); */
+  left: 0;
+}
+
+
+
+.blur-text {
+  filter: blur(5px);
+  font-weight: 700;
+}
+
+.screen-2 {
+  height: 100vh;
+  background: linear-gradient(180deg, #3C3F3E 7.66%, #218683 51.4%);
+  /* background-color: #208683; */
+}
+
+.screen-2-canvas {
+  filter: blur(4px);
+}
+
+.screen-2-p {
+  top: 50vh;
+}
+
+.screen-3 {
+  background-color: #208683;
+}
+
+.screen-3-p {
+  /* position: sticky; */
+}
+
+.screen-4 {
+  background-color: #208683;
+  background-image: url("./static/radial-blur-bg.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 130vh;
+}
+
+.screen-4-p {
+  top: 75vh;
+}

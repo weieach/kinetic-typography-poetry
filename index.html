@@ -15,13 +15,45 @@
         <h1>To the Tune “Qing Yu An: The Green Jade Bowl”</h1>
         <h2>He Zhu</h2>
     </header>
+    <main>
+        <div>
+            <div class="stanza-1">
+                <p class="poem-line screen-1-p">Your footsteps so light <span class="blur-text footstep-blur">they could
+                        tread on
+                        water.</span> </p>
+                <p class="poem-line screen-2-p stanza-end">Your leaving shadow–silken- <br>stepped and scented-petals
+                    blown in a gust.
+                </p>
+            </div>
+            <div class="stanza-2">
+                <p class="poem-line screen-3-p">Youthful years–mellifluous <br>
+                    and plush like strings of a garnished harp–</p>
+                <p class="poem-line screen-4-p">spent without you, wasted.</p>
+            </div>
+        </div>
+    </main>
     <div id="smooth-wrapper">
         <div id="smooth-content">
-            
-            
-            <canvas class="webgl"></canvas>
+            <div class="canvas-array">
+            <section class="screen-1">
+
+                <canvas class="webgl screen-1-canvas"></canvas>
+
+            </section>
+            <section class="screen-2">
+
+                <canvas class="webgl screen-2-canvas"></canvas>
+
+            </section>
+            <section class="screen-3">
+            </section>
+            <section class="screen-4">
+                <canvas class="screen-4-canvas"></canvas>
+            </section>
+            </div>
         </div>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
@@ -31,10 +63,13 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/SplitText.min.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script> -->
 
-    
+
 
     <script src="gsap-script.js"></script>
-    <script type="module" src="./script.js"></script>
+    <script type="module" src="./script-1.js"></script>
+    <script type="module" src="./script-2.js"></script>
+    <script type="module" src="./script-4.js"></script>
+
 </body>
 
 </html>
