@@ -4,52 +4,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kinetic Typography</title>
+    <title>Qing Yu An: Kinetic Typography</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.typekit.net/kgi3urk.css">
-
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Stack+Sans+Text:wght@200..700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <header>
         <h1>To the Tune “Qing Yu An: The Green Jade Bowl”</h1>
         <h2>He Zhu</h2>
+        <audio src="static/music-liushui.mp3" autoplay loop preload="auto"></audio>
+
+
     </header>
     <main>
         <div>
+            <div class="title-pg">
+                <div class="poem-title-lines">
+                    <p class="poem-title-line">青</p>
+                    <p class="poem-title-line">玉</p>
+                    <p class="poem-title-line">案</p>
+                </div>
+                <p class="poem-info poem-dynasty">[宋] </p>
+                <p class="poem-info poem-author">贺铸</p>
+                <p class="tag tag-qing">Qing</p>
+                <p class="tag tag-yu">Yu</p>
+                <p class="tag tag-an">An</p>
+            </div>
             <div class="stanza-1">
                 <p class="poem-line screen-1-p">Your footsteps so light <span class="blur-text footstep-blur">they could
                         tread on
                         water.</span> </p>
-                <p class="poem-line screen-2-p stanza-end">Your leaving shadow–silken- <br>stepped and scented-petals
-                    blown in a gust.
+                <p class="poem-line screen-2-p">Your leaving shadow–</p>
+                <p class="poem-line screen-3-p">silken-stepped and scented-
                 </p>
+                <p class="poem-line screen-4-p stanza-end">petals blown in a gust.</p>
             </div>
             <div class="stanza-2">
-                <p class="poem-line screen-3-p">Youthful years–mellifluous <br>
+                <p class="poem-line screen-5-p">Youthful years–mellifluous <br>
                     and plush like strings of a garnished harp–</p>
-                <p class="poem-line screen-4-p">spent without you, wasted.</p>
+                <p class="poem-line screen-6-p stanza-end">spent without you, wasted.</p>
+            </div>
+            <div class="stanza-3">
+                <p class="poem-line screen-7-p stanza-end">The moon halts to gaze at flowers. <br>Is it true that only the spring breeze can find you?</p>
             </div>
         </div>
     </main>
     <div id="smooth-wrapper">
         <div id="smooth-content">
             <div class="canvas-array">
-            <section class="screen-1">
+                <section class="screen-1">
+                    <canvas class="webgl screen-1-canvas"></canvas>
+                    <p class="tooltip">[ scroll to continue ]</p>
 
-                <canvas class="webgl screen-1-canvas"></canvas>
+                </section>
+                <section class="screen-2">
 
-            </section>
-            <section class="screen-2">
+                    <!-- <canvas class="webgl screen-2-canvas"></canvas> -->
 
-                <canvas class="webgl screen-2-canvas"></canvas>
+                </section>
+                <section class="screen-3">
 
-            </section>
-            <section class="screen-3">
-            </section>
-            <section class="screen-4">
-                <canvas class="screen-4-canvas"></canvas>
-            </section>
+                </section>
+                <section class="screen-4">
+                    <canvas class="screen-4-canvas"></canvas>
+                </section>
+                <section class="screen-5">
+                    <canvas class="screen-5-canvas"></canvas>
+                </section>
+                <section class="screen-6">
+                </section>
+
+                <!-- stanza 2 -->
+
+
+                <section class="screen-7">
+                    <div class="background-shield"></div>
+                    <canvas class="screen-7-canvas"></canvas>
+                </section>
+                <!-- stanza 4 -->
             </div>
         </div>
     </div>
@@ -66,9 +105,11 @@
 
 
     <script src="gsap-script.js"></script>
-    <script type="module" src="./script-1.js"></script>
+    <script type="module" src="./script-1-v4.js"></script>
     <script type="module" src="./script-2.js"></script>
     <script type="module" src="./script-4.js"></script>
+    <script type="module" src="./script-5.js"></script>
+    <script type="module" src="./script-7.js"></script>
 
 </body>
 

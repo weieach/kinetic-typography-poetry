@@ -3,6 +3,8 @@ import { TextGeometry } from "three/examples/jsm/geometries/TextGeometry.js";
 import { FontLoader } from "three/examples/jsm/loaders/FontLoader.js";
 
 import typefaceFont from "./fonts/Noto Sans SC_Regular.json";
+// import typefaceFont from "./fonts/fyxy_Regular.json";
+
 
 const scene = new THREE.Scene();
 // scene.background = new THREE.Color("#3D3F3E");
@@ -43,11 +45,11 @@ const createPoemLineMeshes = () => {
     const textGeometry = new TextGeometry(poemChiLine[i], {
       font: font,
       size: 0.05,
-      depth: 0.005,
+      depth: 0.002,
       curveSegments: 12,
       bevelEnabled: true,
-      bevelThickness: 0.03,
-      bevelSize: 0.02,
+      bevelThickness: 0.01,
+      bevelSize: 0.005,
       bevelOffset: 0,
       bevelSegments: 5,
     });
@@ -105,7 +107,7 @@ const tick = () => {
   for (let i = 0; i < poemLineArr.length; i++) {
     poemLineArr[i].position.y += Math.random() * 0.005;
     poemLineArr[i].position.x += Math.random() * 0.005;
-    poemLineArr[i].rotation.x += Math.random() * 0.005;
+    poemLineArr[i].rotation.x += Math.random() * 0.002;
     let disappearChance = Math.random();
     if (disappearChance < 0.2) {
         // poemLineArr.splice(i, 1);

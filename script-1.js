@@ -2,7 +2,7 @@ import * as THREE from "three";
 import { TextGeometry } from "three/examples/jsm/geometries/TextGeometry.js";
 import { FontLoader } from "three/examples/jsm/loaders/FontLoader.js";
 
-import typefaceFont from "./fonts/Noto Sans SC_Regular.json";
+import typefaceFont from "./fonts/fyxy_Regular.json";
 
 const scene = new THREE.Scene();
 scene.background = new THREE.Color("#3D3F3E");

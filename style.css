@@ -1,3 +1,5 @@
+@import url("./font.css");
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -33,7 +35,7 @@ header {
   font-size: 0.6rem;
 }
 
-header > * {
+header>* {
   font-weight: 400;
   text-align: center;
   width: 100%;
@@ -52,9 +54,9 @@ main {
   grid-template-columns: 1fr 500px 1fr;
 }
 
-main > div{
-    margin-inline: auto;
-    grid-column: 2;
+main>div {
+  margin-inline: auto;
+  grid-column: 2;
 }
 
 
@@ -63,9 +65,105 @@ p {
   font-size: 1.1rem;
 }
 
+.title-pg {
+  position: fixed;
+  z-index: 800;
+  top: 0;
+  left: 0;
+  background-color: var(--dark-gray);
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  font-family: "HYChang";
+  color: #2DB6B1;
+}
+
+.poem-title-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: -50px;
+}
+
+.poem-title-line {
+  font-size: 280px;
+  line-height: 1.18;
+  
+}
+
+.poem-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 24px;
+  width: 100vw;
+  text-align: center;
+}
+
+.poem-dynasty {
+  top: 32.5%;
+}
+
+.poem-author {
+  top: 63.5%;
+}
+
+.tag {
+  position: absolute;
+  top: 0;
+  left: 57.2%;
+  font-size: 22px;
+  padding: 3px 10px;
+  border: 1.8px solid #2DB5B1;
+}
+
+.tag-qing {
+  top: 5%;
+}
+
+.tag-yu {
+  top: 40%;
+}
+
+.tag-an {
+  top: 73%;
+}
+
+.background-shield {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  z-index: -200;
+  height: 120vh;
+  background-color: var(--dark-gray);
+}
+.tooltip {
+  position: absolute;
+  bottom: 5vh;
+  width: 100%;
+  color: #b1e1ed;
+  text-align: center;
+  font-family: "geist";
+  opacity: 0;
+  filter: blur(10px);
+}
+
 .canvas-array {
   height: 100vh;
-  overflow:hidden
+  /* turn this back on for official run */
+  overflow: hidden;
+  /* overflow: scroll; */
+}
+
+.screen-0 {
+  height: 100vh;
 }
 
 .screen-1 {
@@ -74,8 +172,8 @@ p {
   background-color: var(--dark-gray);
 }
 
-.pin-spacer:first-child{
-    background-color: var(--dark-gray);
+.pin-spacer:first-child {
+  background-color: var(--dark-gray);
 }
 
 .poem-line {
@@ -85,14 +183,14 @@ p {
   line-height: 1.6;
 }
 
-.stanza-end{
-    margin-bottom: 2rem;
+.stanza-end {
+  margin-bottom: 2rem;
 }
 
 /* .poem-line:not(.poem-line:first-of-type) */
 
 .screen-1-canvas {
-  filter: blur(14px);
+  filter: blur(1px);
   position: relative;
   top: 0;
   /* filter: blur(20px); */
@@ -108,7 +206,7 @@ p {
 
 .screen-2 {
   height: 100vh;
-  background: linear-gradient(180deg, #3C3F3E 7.66%, #218683 51.4%);
+  background: linear-gradient(180deg, #3C3F3E 2.66%, #218683 97.4%);
   /* background-color: #208683; */
 }
 
@@ -131,12 +229,42 @@ p {
 .screen-4 {
   background-color: #208683;
   background-image: url("./static/radial-blur-bg.png");
-  background-size: contain;
+  background-size: 80%;
   background-repeat: no-repeat;
   background-position: center;
-  height: 130vh;
+
+  height: 120vh;
 }
 
 .screen-4-p {
   top: 75vh;
+}
+
+.screen-5 {
+  position: relative;
+}
+
+.screen-5-canvas {
+  height: 200vh;
+  position: absolute;
+}
+
+.screen-5,
+.screen-6,
+.screen-7 {
+  height: 100vh;
+}
+
+.screen-6 {
+  background: linear-gradient(180deg, #218683 50.66%, #3C3F3E 90.4%);
+  z-index: -10;
+}
+
+.screen-7 {
+  background-color: var(--dark-gray);
+  position: relative;
+}
+
+.screen-7-canvas{
+  height: 100vh;
 }

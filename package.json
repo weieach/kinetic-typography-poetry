@@ -20,6 +20,7 @@
   "homepage": "https://github.com/weieach/kinetic-typography-poetry#readme",
   "description": "",
   "dependencies": {
+    "lil-gui": "^0.21.0",
     "three": "^0.182.0",
     "vite": "^7.3.1"
   }
