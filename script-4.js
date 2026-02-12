@@ -2,18 +2,20 @@
 // import { TextGeometry } from "three/examples/jsm/geometries/TextGeometry.js";
 // import { FontLoader } from "three/examples/jsm/loaders/FontLoader.js";
 
-import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js";
+// import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js";
+// import { FontLoader } from "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/loaders/FontLoader.js";
+// import { TextGeometry } from "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/geometries/TextGeometry.js";
 
-import { FontLoader } from "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/loaders/FontLoader.js";
-
-import { TextGeometry } from "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/geometries/TextGeometry.js";
+import * as THREE from "three";
+import { FontLoader } from "three/addons/loaders/FontLoader.js";
+import { TextGeometry } from "three/addons/geometries/TextGeometry.js";
 
 // import typefaceFont from "./fonts/Noto Sans SC_Regular.json";
 // import typefaceFont from "./fonts/fyxy_Regular.json";
 
 
 
-loader.load("./fonts/NotoSansSC_Regular.json", (typefaceFont) => {
+loader.load(new URL("./fonts/NotoSansSC_Regular.json", import.meta.url).href, (typefaceFont) => {
 
 const scene = new THREE.Scene();
 // scene.background = new THREE.Color("#3D3F3E");

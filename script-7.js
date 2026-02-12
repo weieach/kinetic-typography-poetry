@@ -2,14 +2,18 @@
 // import { TextGeometry } from "three/examples/jsm/geometries/TextGeometry.js";
 // import { FontLoader } from "three/examples/jsm/loaders/FontLoader.js";
 
-import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js";
-import { FontLoader } from "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/loaders/FontLoader.js";
-import { TextGeometry } from "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/geometries/TextGeometry.js";
+// import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js";
+// import { FontLoader } from "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/loaders/FontLoader.js";
+// import { TextGeometry } from "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/geometries/TextGeometry.js";
+
+import * as THREE from "three";
+import { FontLoader } from "three/addons/loaders/FontLoader.js";
+import { TextGeometry } from "three/addons/geometries/TextGeometry.js";
 
 // import typefaceFont from "./fonts/HYChangLiSongKeBenOriginalW_Regular.json";
 // import GUI from 'lil-gui'
 
-loader.load("./fonts/HYChangLiSongKeBenOriginalW_Regular.json", (typefaceFont) => {
+loader.load(new URL("./fonts/HYChangLiSongKeBenOriginalW_Regular.json", import.meta.url).href, (typefaceFont) => {
 
 // const gui = new GUI()
 
