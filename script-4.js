@@ -10,12 +10,13 @@ import * as THREE from "three";
 import { FontLoader } from "three/addons/loaders/FontLoader.js";
 import { TextGeometry } from "three/addons/geometries/TextGeometry.js";
 
-// import typefaceFont from "./fonts/Noto Sans SC_Regular.json";
+import typefaceFont from "./fonts/Noto Sans SC_Regular.json";
 // import typefaceFont from "./fonts/fyxy_Regular.json";
 
+// const loader = new FontLoader();
 
 
-loader.load(new URL("./fonts/NotoSansSC_Regular.json", import.meta.url).href, (typefaceFont) => {
+// loader.load("./fonts/NotoSansSC_Regular.json", (typefaceFont) => {
 
 const scene = new THREE.Scene();
 // scene.background = new THREE.Color("#3D3F3E");
@@ -134,4 +135,4 @@ const tick = () => {
 };
 
 tick();
-})
+// })

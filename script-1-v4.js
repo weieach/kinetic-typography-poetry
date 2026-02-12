@@ -12,11 +12,12 @@ import { FontLoader } from "three/addons/loaders/FontLoader.js";
 import { TextGeometry } from "three/addons/geometries/TextGeometry.js";
 
 
-// import typefaceFont from "./fonts/HYChangLiSongKeBenOriginalW_Regular.json";
+import typefaceFont from "./fonts/HYChangLiSongKeBenOriginalW_Regular.json";
 // import GUI from 'lil-gui'
 
+// const loader = new FontLoader();
 
-loader.load(new URL("./fonts/HYChangLiSongKeBenOriginalW_Regular.json", import.meta.url).href, (typefaceFont) => {
+// loader.load(new URL("./fonts/HYChangLiSongKeBenOriginalW_Regular.json", import.meta.url).href, (typefaceFont) => {
   
 
 
@@ -204,4 +205,4 @@ function mapRange(value, inMin, inMax, outMin, outMax){
   return (value - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
 }
 
-});
+// });
