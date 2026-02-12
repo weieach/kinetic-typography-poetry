@@ -276,8 +276,8 @@ gsap.to(".ph-fill.ph-caret-left", {
   gsap.from(".screen-8-p", {
     scrollTrigger: {
       trigger: ".screen-8",
-      start: "top 40%",
-      end: "top 20%",
+      start: "top 25%",
+      end: "top 15%",
       scrub: true,
       pin: true,
       pinSpacing: false,
@@ -289,7 +289,7 @@ gsap.to(".ph-fill.ph-caret-left", {
   gsap.from(".screen-9-p", {
     scrollTrigger: {
       trigger: ".screen-9",
-      start: "top 20%",
+      start: "top 10%",
       end: "top 0%",
       scrub: true,
       pin: true,

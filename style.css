@@ -121,7 +121,7 @@ p {
   bottom: 0;
   left: 0;
   margin-bottom: 40px;
-  margin-left: 36px;
+  margin-left: 44px;
   font-size: 14.5px;
   line-height: 1.3;
   font-family: "Rowan";
@@ -366,7 +366,7 @@ p {
 }
 
 .screen-8{
-  background: linear-gradient(180deg, #3C3F3E 20.4%, #378F8E 90.66%);
+  background: linear-gradient(180deg, #3C3F3E 20.4%, #007A79 70.66%);
 }
 
 .screen-8-canvas{
@@ -382,16 +382,24 @@ p {
   width: 100%;
   object-fit: cover;
   bottom: 0;
+  overflow: hidden;
   left: 0;
   /* mix-blend-mode: overlay; */
   z-index: 100;
-  filter:brightness(1.5);
   opacity: 0.7;
-  filter: blur(5px);
+  border-top: 80px solid #378F8D;
+  filter: saturate(150%) brightness(80%);
+  
 }
 
 .stanza-4-screens{
 position: relative;
 height: 200vh;
 background-color: #378F8D;
+}
+
+.screen-9{
+  background-color: #05807E;
+  border-bottom: 80px solid #3d3f3f;
+  filter: blur(5px);
 }
