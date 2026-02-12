@@ -17,6 +17,10 @@ body {
   background-color: #208683;
 }
 
+p::selection{
+  background-color: #2FB5B1;
+}
+
 .page-loader {
   position: fixed;
   inset: 0;
