@@ -12,17 +12,28 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Stack+Sans+Text:wght@200..700&display=swap"
         rel="stylesheet">
-  <script type="module" crossorigin src="/assets/index-BriFfPhf.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-kL2j_BXF.css">
+        <!-- phosphor icon -->
+             <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    >
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+    >
+  <script type="module" crossorigin src="/assets/index-D30g7rzn.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-BRSRf6ST.css">
 </head>
 
 <body>
     <header>
         <h1>To the Tune “Qing Yu An: The Green Jade Bowl”</h1>
         <h2>He Zhu</h2>
-        <audio src="/assets/music-liushui-AGABc9_M.mp3" autoplay loop preload="auto"></audio>
+        <audio src="/assets/music-liushui-DmmpYJ6U.mp3" autoplay loop preload="auto"></audio>
 
-
+        <button class="btn-music"><i class="ph-fill ph-speaker-simple-high"></i></button>
     </header>
     <main>
         <div>
@@ -41,7 +52,7 @@
             <div class="stanza-1">
                 <p class="poem-line screen-1-p">Your footsteps so light <span class="blur-text footstep-blur">they could
                         tread on
-                        water.</span> </p>
+                        water.</span> <i class="ph-fill ph-caret-left"></i>                    </p>
                 <p class="poem-line screen-2-p">Your leaving shadow–</p>
                 <p class="poem-line screen-3-p">silken-stepped and scented-
                 </p>
@@ -55,6 +66,11 @@
             <div class="stanza-3">
                 <p class="poem-line screen-7-p stanza-end">The moon halts to gaze at flowers. <br>Is it true that only the spring breeze can find you?</p>
             </div>
+            <div class="stanza-4">
+                <p class="poem-line screen-8-p">I pick up the brush-pen.</p>
+                <p class="poem-line screen-9-p stanza-end">I fail to <span class="blur-text brush-blur">put down a line.</span> <i class="ph-fill ph-caret-left"></i>                </p>
+            </div>
+            <!-- <button>Back to top</button> -->
         </div>
     </main>
     <div id="smooth-wrapper">
@@ -90,6 +106,15 @@
                     <canvas class="screen-7-canvas"></canvas>
                 </section>
                 <!-- stanza 4 -->
+                 <div class="stanza-4-screens">
+                <section class="screen-8">
+                    <!-- <canvas class="screen-8-canvas"></canvas> -->
+                    
+                </section>
+                <section class="screen-9">
+                    <video src="/assets/char-levitating-sfUIirJM.mp4" class="screen-8-video" muted></video>
+                </section>
+            </div>
             </div>
         </div>
     </div>
@@ -106,7 +131,7 @@
 
 
     <script src="gsap-script.js"></script>
-
+    <!-- <script type="module" src="./script-8.js"></script> -->
 </body>
 
 </html>

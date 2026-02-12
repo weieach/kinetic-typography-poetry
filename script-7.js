@@ -6,7 +6,7 @@ import typefaceFont from "./fonts/HYChangLiSongKeBenOriginalW_Regular.json";
 import GUI from 'lil-gui'
 
 
-const gui = new GUI()
+// const gui = new GUI()
 
 const scene = new THREE.Scene();
 // Canvas
@@ -92,13 +92,13 @@ bottomPlane.position.set(6, -0.3, -1.13);
 bottomPlane.rotation.set(-1, 0, 0.83);
 bottomPlane.receiveShadow = true;
 
-gui.add(bottomPlane.rotation, 'x', - 3, 3, 0.01).name("bottomPlaneRotationX")
-gui.add(bottomPlane.rotation, 'y', - 3, 3, 0.01).name("bottomPlaneRotationY")
-gui.add(bottomPlane.rotation, 'z', - 3, 3, 0.01).name("bottomPlaneRotationZ")
+// gui.add(bottomPlane.rotation, 'x', - 3, 3, 0.01).name("bottomPlaneRotationX")
+// gui.add(bottomPlane.rotation, 'y', - 3, 3, 0.01).name("bottomPlaneRotationY")
+// gui.add(bottomPlane.rotation, 'z', - 3, 3, 0.01).name("bottomPlaneRotationZ")
 
-gui.add(bottomPlane.position, 'x', - 3, 3, 0.01).name("bottomPlanePositionX")
-gui.add(bottomPlane.position, 'y', - 3, 3, 0.01).name("bottomPlanePositionY")
-gui.add(bottomPlane.position, 'z', - 3, 3, 0.01).name("bottomPlanePositionZ")
+// gui.add(bottomPlane.position, 'x', - 3, 3, 0.01).name("bottomPlanePositionX")
+// gui.add(bottomPlane.position, 'y', - 3, 3, 0.01).name("bottomPlanePositionY")
+// gui.add(bottomPlane.position, 'z', - 3, 3, 0.01).name("bottomPlanePositionZ")
 
 scene.add(bottomPlane);
 
@@ -153,7 +153,7 @@ const camera = new THREE.PerspectiveCamera(
   100,
 );
 camera.position.z = 3;
-gui.add(camera.rotation, 'x', - 3, 3, 0.01).name("cameraRotationX")
+// gui.add(camera.rotation, 'x', - 3, 3, 0.01).name("cameraRotationX")
 
 scene.add(camera);
 

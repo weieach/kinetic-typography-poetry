@@ -114,6 +114,18 @@ p {
   top: 63.5%;
 }
 
+.poem-author:hover {
+  content: "He Zhu";
+}
+
+.ph-speaker-simple-x{
+  opacity: 0.6;
+}
+
+
+
+
+
 .tag {
   position: absolute;
   top: 0;
@@ -135,6 +147,24 @@ p {
   top: 73%;
 }
 
+.btn-music{
+  background: none;
+  border: none;
+  width: fit-content;
+  position: fixed;
+  right: 8%;
+  top: 5vh;
+  font-size: 1.4rem;
+  padding: 0.5rem;
+  color: white;
+}
+
+.btn-music:hover {
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s ease-in-out;
+}
+
 .background-shield {
   position: absolute;
   bottom: 0;
@@ -144,6 +174,7 @@ p {
   height: 120vh;
   background-color: var(--dark-gray);
 }
+
 .tooltip {
   position: absolute;
   bottom: 5vh;
@@ -181,6 +212,13 @@ p {
   text-align: left;
   /* margin-bottom: 0.4rem; */
   line-height: 1.6;
+}
+
+.ph-caret-left {
+  display: inline-block;
+  opacity: 0.4;
+  transform: translateX(5px);
+
 }
 
 .stanza-end {
@@ -229,7 +267,7 @@ p {
 .screen-4 {
   background-color: #208683;
   background-image: url("./static/radial-blur-bg.png");
-  background-size: 80%;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 
@@ -267,4 +305,40 @@ p {
 
 .screen-7-canvas{
   height: 100vh;
+}
+
+.screen-8, .screen-9 {
+  height: 100vh;
+  background-color: #378F8D;
+}
+
+.screen-8{
+  background: linear-gradient(180deg, #3C3F3E 20.4%, #378F8E 90.66%);
+}
+
+.screen-8-canvas{
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.screen-8-video{
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+  object-fit: cover;
+  bottom: 0;
+  left: 0;
+  /* mix-blend-mode: overlay; */
+  z-index: 100;
+  filter:brightness(1.5);
+  opacity: 0.7;
+  filter: blur(5px);
+}
+
+.stanza-4-screens{
+position: relative;
+height: 200vh;
+background-color: #378F8D;
 }

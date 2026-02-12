@@ -92,7 +92,7 @@ const tick = () => {
         end: "top 30%",
         scrub: true,
       },
-      y: '+=15',
+      y: '+=18',
       
     });
   }
