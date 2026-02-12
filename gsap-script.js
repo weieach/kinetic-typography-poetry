@@ -2,6 +2,13 @@
 document.addEventListener("DOMContentLoaded", (event) => {
   gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin, SplitText);
 
+  const pageLoader = document.querySelector(".page-loader");
+  if (pageLoader) {
+    window.addEventListener("load", () => {
+      pageLoader.classList.add("is-hidden");
+    });
+  }
+
   let smoother = ScrollSmoother.create({
     wrapper: "#smooth-wrapper",
     content: "#smooth-content",
