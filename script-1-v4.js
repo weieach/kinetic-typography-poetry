@@ -10,8 +10,12 @@ import { FontLoader } from "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/
 import { TextGeometry } from "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/geometries/TextGeometry.js";
 
 
-import typefaceFont from "./fonts/HYChangLiSongKeBenOriginalW_Regular.json";
-import GUI from 'lil-gui'
+// import typefaceFont from "./fonts/HYChangLiSongKeBenOriginalW_Regular.json";
+// import GUI from 'lil-gui'
+
+
+loader.load("./fonts/HYChangLiSongKeBenOriginalW_Regular.json", (typefaceFont) => {
+  
 
 
 const scene = new THREE.Scene();
@@ -197,3 +201,5 @@ tick();
 function mapRange(value, inMin, inMax, outMin, outMax){
   return (value - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
 }
+
+});

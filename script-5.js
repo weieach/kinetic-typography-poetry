@@ -6,7 +6,10 @@ import * as THREE from "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.m
 import { FontLoader } from "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/loaders/FontLoader.js";
 import { TextGeometry } from "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/geometries/TextGeometry.js";
 
-import typefaceFont from "./fonts/HYChangLiSongKeBenOriginalW_Regular.json";
+// import typefaceFont from "./fonts/HYChangLiSongKeBenOriginalW_Regular.json";
+
+loader.load("./fonts/HYChangLiSongKeBenOriginalW_Regular.json", (typefaceFont) => {
+
 
 const scene = new THREE.Scene();
 // Canvas
@@ -106,3 +109,5 @@ const tick = () => {
 };
 
 tick();
+
+})

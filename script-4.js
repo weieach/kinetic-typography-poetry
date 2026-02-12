@@ -8,9 +8,12 @@ import { FontLoader } from "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/
 
 import { TextGeometry } from "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/geometries/TextGeometry.js";
 
-import typefaceFont from "./fonts/Noto Sans SC_Regular.json";
+// import typefaceFont from "./fonts/Noto Sans SC_Regular.json";
 // import typefaceFont from "./fonts/fyxy_Regular.json";
 
+
+
+loader.load("./fonts/NotoSansSC_Regular.json", (typefaceFont) => {
 
 const scene = new THREE.Scene();
 // scene.background = new THREE.Color("#3D3F3E");
@@ -129,3 +132,4 @@ const tick = () => {
 };
 
 tick();
+})
