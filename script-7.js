@@ -10,10 +10,16 @@ import * as THREE from "three";
 import { FontLoader } from "three/addons/loaders/FontLoader.js";
 import { TextGeometry } from "three/addons/geometries/TextGeometry.js";
 
-import typefaceFont from "./fonts/HYChangLiSongKeBenOriginalW_Regular.json";
+// import typefaceFont from "./fonts/HYChangLiSongKeBenOriginalW_Regular.json";
 // import GUI from 'lil-gui'
 
 // const loader = new FontLoader();
+
+const typefaceFont = await (async () => {
+  const res = await fetch(new URL("./fonts/NotoSansSC_Regular.json", import.meta.url));
+  const json = await res.json();
+  return new FontLoader().parse(json);
+})();
 
 
 // loader.load(new URL("./fonts/HYChangLiSongKeBenOriginalW_Regular.json", import.meta.url).href, (typefaceFont) => {
