@@ -4,7 +4,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   const pageLoader = document.querySelector(".page-loader");
   if (pageLoader) {
-    window.addEventListener("load", () => {
+    Promise.all([
+      new Promise(resolve => window.addEventListener("load", resolve)),
+      window.__allMeshesReady
+    ]).then(() => {
       pageLoader.classList.add("is-hidden");
     });
   }

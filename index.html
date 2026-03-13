@@ -125,6 +125,15 @@
         </div>
     </div>
 
+    <script>
+        window.__meshesTotal = 4;
+        window.__meshesLoaded = 0;
+        window.__allMeshesReady = new Promise(function (resolve) {
+            window.__signalMeshReady = function () {
+                if (++window.__meshesLoaded >= window.__meshesTotal) resolve();
+            };
+        });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>

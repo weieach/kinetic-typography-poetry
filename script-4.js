@@ -129,4 +129,5 @@ const tick = () => {
 };
 
 tick();
+window.__signalMeshReady();
 // })
