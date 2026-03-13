@@ -13,7 +13,7 @@ import * as THREE from "three";
 import { FontLoader } from "three/addons/loaders/FontLoader.js";
 import { TextGeometry } from "three/addons/geometries/TextGeometry.js";
 
-const typefaceFont = await fetch(new URL("./fonts/HYChangLiSongKeBenOriginalW_Regular.json", import.meta.url)).then(r => r.json());
+const typefaceFont = await window.__fontData.HYChangLiSong;
 
 // const gui = new GUI()
 

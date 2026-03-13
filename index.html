@@ -133,6 +133,11 @@
                 if (++window.__meshesLoaded >= window.__meshesTotal) resolve();
             };
         });
+
+        window.__fontData = {
+            HYChangLiSong: fetch("./fonts/HYChangLiSongKeBenOriginalW_Regular.json").then(function (r) { return r.json(); }),
+            NotoSansSC:    fetch("./fonts/Noto Sans SC_Regular.json").then(function (r) { return r.json(); }),
+        };
     </script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
 
