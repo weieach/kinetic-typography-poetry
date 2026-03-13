@@ -12,18 +12,7 @@ import { FontLoader } from "three/addons/loaders/FontLoader.js";
 import { TextGeometry } from "three/addons/geometries/TextGeometry.js";
 
 
-import typefaceFont from "./fonts/HYChangLiSongKeBenOriginalW_Regular.json";
-// import GUI from 'lil-gui'
-
-// const loader = new FontLoader();
-
-// loader.load(new URL("./fonts/HYChangLiSongKeBenOriginalW_Regular.json", import.meta.url).href, (typefaceFont) => {
-  
-  // const typefaceFont = await (async () => {
-  //   const res = await fetch(new URL("./fonts/NotoSansSC_Regular.json", import.meta.url));
-  //   const json = await res.json();
-  //   return new FontLoader().parse(json);
-  // })();
+const typefaceFont = await fetch(new URL("./fonts/HYChangLiSongKeBenOriginalW_Regular.json", import.meta.url)).then(r => r.json());
 
 
 const scene = new THREE.Scene();
@@ -92,7 +81,7 @@ const createPoemLineMeshes = () => {
     const textGeometry = new TextGeometry(poemChiLine[i], {
       font: font,
       size: 0.8 + (i/20),
-      depth: 0.01,
+      height: 0.01,
       curveSegments: 12,
       bevelEnabled: true,
       bevelThickness: 0.03,

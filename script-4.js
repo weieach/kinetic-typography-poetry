@@ -10,18 +10,7 @@ import * as THREE from "three";
 import { FontLoader } from "three/addons/loaders/FontLoader.js";
 import { TextGeometry } from "three/addons/geometries/TextGeometry.js";
 
-import typefaceFont from "./fonts/Noto Sans SC_Regular.json";
-// import typefaceFont from "./fonts/fyxy_Regular.json";
-
-// const loader = new FontLoader();
-
-// const typefaceFont = await (async () => {
-//   const res = await fetch(new URL("./fonts/NotoSansSC_Regular.json", import.meta.url));
-//   const json = await res.json();
-//   return new FontLoader().parse(json);
-// })();
-
-// loader.load("./fonts/NotoSansSC_Regular.json", (typefaceFont) => {
+const typefaceFont = await fetch(new URL("./fonts/Noto Sans SC_Regular.json", import.meta.url)).then(r => r.json());
 
 const scene = new THREE.Scene();
 // scene.background = new THREE.Color("#3D3F3E");
@@ -62,7 +51,7 @@ const createPoemLineMeshes = () => {
     const textGeometry = new TextGeometry(poemChiLine[i], {
       font: font,
       size: 0.05,
-      depth: 0.002,
+      height: 0.002,
       curveSegments: 12,
       bevelEnabled: true,
       bevelThickness: 0.01,
